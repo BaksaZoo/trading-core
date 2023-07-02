@@ -1,0 +1,12 @@
+spring:
+    datasource:
+        url: jdbc:postgresql://postgres:5432/
+    liquibase:
+        url: jdbc:postgresql://postgres:5432/
+    security:
+        oauth2:
+            resourceserver:
+                jwt:
+                    issuer-uri: http://keycloak:8080/auth/realms/TradingApp
+keycloak:
+    auth-server-url: http://keycloak:8080
