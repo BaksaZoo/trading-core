@@ -1,0 +1,23 @@
+spring:
+    datasource:
+        password: Password123
+        url: jdbc:postgresql://localhost:5432/
+        username: user
+    liquibase:
+        change-log: classpath:db/changelog.xml
+        password: Password123
+        url: jdbc:postgresql://localhost:5432/
+        user: user
+    security:
+        oauth2:
+            resourceserver:
+                jwt:
+                    issuer-uri: http://localhost:8080/auth/realms/TradingApp
+jwt:
+    auth:
+        converter:
+            principal-attribute: preferred_username
+            resource-id: trading-login
+keycloak:
+    auth-server-url: http://localhost:8080
+    realm: TradingApp
